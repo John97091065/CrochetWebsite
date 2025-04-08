@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+
+
+
+/* -------------------------------------------------GENERAL------------------------------------------------- */
+@font-face {
+    font-family: 'MyFont';
+    src: url('/static/fonts/beauty-bright-font/BeautyBrightPersonalUseRegular-XmVa.ttf') format('woff2');
+}
+
+h1{
+    font-family: 'MyFont', sans-serif;
+    font-size: 100px;
+    color: #fff;
+}
+
+/* -------------------------------------------------~~~~------------------------------------------------- */
+body{
+    background: linear-gradient(45deg,
+                #ffcccc 5%,
+                #fcc6c6 10%,
+                #f7cdcd 30%,
+                #ffd7d7 50%,
+                #f7cdcd 70%,
+                #dfb9b9 80%,
+                #ffcccc 95%);
+}
+
+/* -------------------------------------------------NAV------------------------------------------------- */
+header{
+}
+
+nav{
+    margin: auto;
+    padding: 20px 100px 0;
+}
+
+nav a{
+    color: #FF6B69;
+    font-size: large;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav a.active{
+    color: #fff;
+}
+
+nav a:hover{
+    color: #fff;
+}
+
+.navBar{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.nLink img{
+    padding-right: 20px;
+}
+
+.navBar form{
+    background: #e7e7e7;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.navBar form button{
+        border: none;
+        background: #FF6B69;
+        color: #fff;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        cursor: pointer;
+    }
+
+.navBar form button i{
+    font-size: large;
+    padding: 10px 10px;
+}
+
+.navBar form input{
+        border: none;
+        font-size: medium;
+        background: no-repeat;
+        width: 400px;
+        
+}
+
+/* ---------------------------BANNER--------------------------- */
+.banner {
+    height: 834px;
+    /* background: linear-gradient(45deg,
+                #ffcccc 5%,
+                #dfb9b9 10%,
+                #f7cdcd 30%,
+                #ffd7d7 50%,
+                #f7cdcd 70%,
+                #dfb9b9 80%,
+                #ffcccc 95%); */
+}
+
+.banner .banner-text{
+    width: fit-content;
+    display: grid;
+    justify-content: center;
+    /* height: 100%; */
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    position: relative;
+    top: 300px;
+}
+
+/* ----------------------------MAIN---------------------------- */
+main{
+    padding: 0 10%;
+    background: #FFEEE9;
+    border-bottom: 2px solid #68867A;
+}
+
+main ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+main ul li{
+    text-align: center;
+}
+
+main ul li:nth-child(2) {
+    border-right: 2px solid #68867A;
+}
+
+main ul li:nth-child(1) {
+    border-right: 2px solid #68867A;
+}
+
+main ul li:nth-child(4) {
+    border-left: 2px solid #68867A;
+}
+
+main ul li a{
+    text-decoration: none;
+    color: #68867A;
+    padding: 10px 0;
+    width: 110px;
+    display: block;
+    transition: 0.3s;
+}
+
+main ul li a:hover{
+    background: #68867A;
+    color: #FFEEE9;
+}
+
+.Grand{
+    height: 60vh;
+}
+
+footer{
+    background: #fff;
+    border-top: 2px solid #FF6B69;
+    height: 20vh;
+    
+}
+
+footer h3{
+    margin-bottom: 15px;
+}
+
+footer .Fgrand{
+    display: flex;
+    justify-content: space-around;
+    height: 180px;
+    padding: 10px 0 0;
+}
+
+footer .Fgrand .Fnav ul {
+    list-style-type: none;  
+    padding: 0;
+}
+
+footer .Fgrand .Fnav ul li a{
+    text-decoration: none;
+    color: #68867A;
+}
+
+footer .Fgrand .Smedia ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .Fgrand .Smedia ul li i{
+    font-size: xx-large;
+    color: #68867A;
+    transition: 0.3s;
+}
+
+footer .Fgrand .Smedia ul li i:hover{
+    /* font-size: 40px; */
+    color: #FF6B69;
+}
+
+footer .copy{
+    padding: 10px 0;
+    background: #68867A;
+    color: #FFEEE9;
+    text-align: center;
+}
