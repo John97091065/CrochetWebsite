@@ -1,13 +1,18 @@
-from flask import Flask, render_template, render_template_string, request, redirect, flash
+from flask import Flask, render_template, render_template_string, request, redirect, url_for, flash
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
+from config import Config
+from forms import RegisterForm
+from model import insert_user
 import os
 
 app = Flask(__name__)
 app.secret_key = 'ffu*@Rudb)QY#VBDQH))G33b30(*2)'
+
+app.config.from_object(Config)
 
 # Email credentials
 EMAIL_ADDRESS = 'madebyshandy@gmail.com'
@@ -79,6 +84,17 @@ def send_email():
 
     return redirect('/')
 
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegisterForm()
+    if form.validate_on_submit():
+        try:
+            insert_user(form.name.data, form.email.data, form.phone.data)
+            flash('User registered successfully!', 'success')
+            return redirect(url_for('register'))
+        except Exception as e:
+            flash(f'Error: {str(e)}', 'danger')
+    return render_template('register.html', form=form)
 
 
 if __name__ == '__main__':
