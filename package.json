@@ -1,0 +1,13 @@
+{
+  "name": "CrochetWebsite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:John97091065/CrochetWebsite.git",
+  "author": "brianp17 <bpostzakelijk@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.3"
+  }
+}
